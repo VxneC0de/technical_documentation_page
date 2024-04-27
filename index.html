@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+
+            <li><a class="nav-link" href="#What_you_should_already_know">What you should already know</a></li>
+
+            <li><a class="nav-link" href="#Intro_to_CSS">Intro to CSS</a></li>
+
+            <li><a class="nav-link" href="#The_Cascade">The Cascade</a></li>
+
+            <li><a class="nav-link" href="#The_Box_Model">The Box Model</a></li>
+
+            <li><a class="nav-link" href="#Block_and_Inline">Block and Inline</a></li>
+
+            <li><a class="nav-link" href="#Flexbox">Flexbox</a></li>
+
+            <li><a class="nav-link" href="#Growing_and_Shrinking">Growing and Shrinking</a></li>
+
+            <li><a class="nav-link" href="#Axes">Axes</a></li>
+
+            <li><a class="nav-link" href="#Alignment">Alignment</a></li>
+
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header><h2>Introduction</h2></header>
+            <div>
+                <p>CSS(Cascading Style Sheets) is a style sheet language used to describe the presentation of documents written in HTML or XML (including XML dialects like SVG, MathML, or XHTML). With CSS, you can define how elements should be rendered on screen, paper, voice, or other media. It is one of the fundamental languages of the open web and is standardized across web browsers according to W3C specifications.</p>
+
+                <p>Instead of versioning CSS specifications, the W3C now periodically takes a snapshot of the most recent stable state of the CSS specification and the progress of individual modules. CSS modules now have version numbers or levels, such as the CSS Color Module Level 5</p>
+
+                <p>Below are some key resources for learning CSS:</p>
+
+                <ul>
+                    <li><strong>Introduction to CSS:</strong> If you’re new to web development, be sure to read our article on CSS basics to understand what it is and how it’s used</li>
+
+                    <li><strong>CSS Tutorials:</strong> Our CSS learning area contains a wealth of tutorials, from beginner to advanced level, covering all the fundamentals.</li>
+
+                    <li><strong>CSS Reference:</strong> Our comprehensive CSS reference describes each CSS property and concept for experienced web developers</li>
+                </ul>
+
+                <p>Remember that CSS is essential for styling and designing your web pages. You can alter font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative elements</p>
+            </div>
+        </section>
+
+        <section class="main-section" id="What_you_should_already_know">
+            <header><h2>What you should already know</h2></header>
+            <div>
+                <p>When introducing CSS, you can assume that the reader already has the following foundational knowledge:</p>
+
+                <ul>
+                    <li>General Understanding of the Internet and the World Wide Web (WWW).</li>
+
+                    <li>Good Working Knowledge of HyperText Markup Language (HTML).</li>
+
+                    <li>Basic Programming Experience.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="Intro_to_CSS">
+            <header><h2>Intro to CSS</h2></header>
+            <div>
+                <p>In the next few lessons, we’re going to focus on what we believe are some foundational CSS concepts, things that everyone should know from the beginning — whether they are just starting out or need a refresher.</p>
+                
+                <h4>Selectors</h4>
+                <ul>
+                    <li>
+                        <h5>Universal selector</h5>
+                        <p>The universal selector will select elements of any type, hence the name “universal”, and the syntax for it is a simple asterisk.</p>
+                        <code>* {
+                            color: purple;
+                        }</code>
+                    </li>
+
+                    <li>
+                        <h5>Type selectors</h5>
+                        <p>A type selector will select all elements of the given element type, and the syntax is just the name of the element:</p>
+                        <code>div {
+                            color: white;
+                        }</code>
+                    </li>
+
+                    <li>
+                        <h5>Class selectors</h5>
+                        <p>Class selectors will select all elements with the given class, which is just an attribute you place on an HTML element. Here’s how you add a class to an HTML tag and select it in CSS:</p>
+                        <code>.alert-text {
+                            color: red;
+                        }</code>
+                    </li>
+
+                    <li>
+                        <h5>ID selectors</h5>
+                        <p>ID selectors are similar to class selectors. They select an element with the given ID, which is another attribute you place on an HTML element. The major difference between classes and IDs is that an element can only have one ID. It cannot be repeated on a single page and should not contain any whitespace:</p>
+                        <code>#title {
+                            background-color: red;
+                        }</code>
+                    </li>
+                </ul>
+
+                <h4>Adding CSS to HTML</h4>
+
+                <ul>
+                    <li>
+                        <h5>External CSS</h5>
+                        <p>External CSS is the most common method you will come across, and it involves creating a separate file for the CSS and linking it inside of an HTML’s opening and closing <head> tags with a self-closing <link> element:</p>
+                        <code>
+                            &lt;head&gt;
+                            &lt;link rel="stylesheet" href="styles.css"&gt;
+                        </code>
+                    </li>
+
+                    <li>
+                        <h5>Internal CSS</h5>
+                        <p>With the internal method, you place all the rules inside of a pair of opening and closing &lt;style&gt; tags, which are then placed inside of the opening and closing &lt;head&gt; tags of your HTML file. Since the styles are being placed directly inside of the &lt;head&gt; tags, we no longer need a &lt;link&gt; element that the external method requires.</p>
+                        <code>
+                            &lt;head&gt;
+                                &lt;style&gt;
+                                div {
+                                    color: white;
+                                    background-color: black;
+                                }
+                        </code>
+                        <code>p {
+                            color: red;
+                        }
+                            &lt;/style&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            ...
+                        &lt;/body&gt;
+                        </code>
+                    </li>
+                
+                    <li>
+                        <h5>Inline CSS</h5>
+                        <p>Inline CSS makes it possible to add styles directly to HTML elements, though this method isn’t as recommended:</p>
+                        <code>
+                            &lt;body&gt;
+                            &lt;div style="color: white; background-color: black;"&gt;...&lt;/div&gt;
+                            &lt;/body&gt;
+                        </code>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main-section" id="The_Cascade">
+            <header><h2>The Cascade</h2></header>
+            <div>
+                <p>The cascade is what determines which rules actually get applied to our HTML. There are different factors that the cascade uses to determine this. We will examine three of these factors, which will hopefully help you avoid those frustrating “I hate CSS” moments.</p>
+
+                <h4>Specificity</h4>
+                <p>A CSS declaration that is more specific will take precedence over less specific ones. Inline styles, which we went over in the previous lesson, have the highest specificity compared to selectors, while each type of selector has its own specificity level that contributes to how specific a declaration is. Other selectors contribute to specificity, but we’re focusing only on the ones we’ve gone over so far:</p>
+                <ol>
+                    <li>ID selectors (most specific selector)</li>
+                    <li>Class selectors</li>
+                    <li>Type selectors</li>
+                </ol>
+
+                <h4>Inheritance</h4>
+                <p>Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if we don’t explicitly write a rule for those descendants. Typography-based properties (color, font-size, font-family, etc.) are usually inherited, while most other properties aren’t.</p>
+
+                <h4>Rule order</h4>
+                <p>The final factor, the end of the line, the tie-breaker of the tie-breakers. Let’s say that after every other factor has been taken into account, there are still multiple conflicting rules targeting an element. How does the cascade determine which rule to apply?</p>
+                <p>Whichever rule was the last defined is the winner.</p>
+            </div>
+        </section>
+
+        <section class="main-section" id="The_Box_Model">
+            <header><h2>The Box Model</h2></header>
+            <div>
+                <p>The first important concept that you need to understand to be successful in CSS is the box model. It isn’t complicated, but skipping over it now would cause you much frustration down the line.</p>
+
+                <p>The only real complication here is that there are many ways to manipulate the size of these boxes, and the space between them, using padding, margin, and border. The assigned articles go into more depth on this concept, but to sum it up briefly:</p>
+
+                <ul>
+                    <li><code>padding</code>: increases the space between the border of a box and the content of the box.</li>
+                    <li><code>margin</code>: increases the space between the borders of a box and the borders of adjacent boxes.</li>
+                    <li><code>border</code>: adds space (even if it’s only a pixel or two) between the margin and the padding.</li>
+                </ul>
+            </div>         
+        </section>
+
+        <section class="main-section" id="Block_and_Inline">
+            <header><h2>Block and Inline</h2></header>
+            <div>
+                <p>In the previous lesson, we discovered that different display types have unique box models, and we can modify the box calculation by changing the display property. CSS has two box types: block and inline boxes, which determine element behavior and interaction. The display property controls how HTML elements appear on the webpage. We will explore its various options further in this lesson.</p>
+
+                <h4>Block and inline</h4>
+                <p>Most of the elements that you have learned about so far are block elements. In other words, their default style is display: block. By default, block elements will appear on the page stacked atop each other, each new element starting on a new line.</p>
+
+                <p>Inline elements, however, do not start on a new line. They appear in line with whatever elements they are placed beside.</p>
+
+                <p>Inline-block elements behave like inline elements, but with block-style padding and margin. display: inline-block is a useful tool to know about, but in practice, you’ll probably end up reaching for flexbox more often if you’re trying to line up a bunch of boxes. Flexbox will be covered in-depth in the next lesson.</p>
+
+                <h4>Divs and spans</h4>
+                <p>Div is a block-level element by default. It is commonly used as a container element to group other elements. Divs allow us to divide the page into different blocks and apply styling to those blocks.</p>
+                <p>Span is an inline-level element by default. It can be used to group text content and inline HTML elements for styling and should only be used when no other semantic HTML element is appropriate.</p>
+            </div>
+        </section>
+
+        <section class="main-section" id="Flexbox">
+            <header><h2>Flexbox</h2></header>
+            <div>
+                <p>Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some rules that you can define.</p>
+
+                <p>A flex container is any element that has display: flex on it. A flex item is any element that lives directly inside of a flex container.</p>
+                <code>
+                .container{
+                    display:flex;
+                }
+                </code>
+                <p>Somewhat confusingly, any element can be both a flex container and a flex item. Said another way, you can also put display: flex on a flex item and then use flexbox to arrange its children.</p>
+                <code>
+                    .container{
+                        display:flex;
+                    }
+                </code>
+                <code>
+                    .item{
+                        display:flex;
+                    }
+                </code>
+            </div>
+        </section>
+
+        <section class="main-section" id="Growing_and_Shrinking">
+            <header><h2>Growung and Shrinking</h2></header>
+            <div>
+                <p>The <code>flex</code> declaration is actually a shorthand for 3 properties that you can set on a flex item. These properties affect how flex items size themselves within their container. </p>
+                <p>In this case, <code>flex</code> is actually a shorthand for <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>.</p>
+    
+                <code>
+                    div{
+                        flex: 1;
+                    }
+                </code>
+    
+                <p>In the above code, <code>flex: 1</code> equates to: <code>flex-grow: 1</code>, <code>flex-shrink: 1</code>, <code>flex-basis: 0</code>.</p>
+    
+                <h4>Flex-grow</h4>
+                <p><code>flex-grow</code> expects a single number as its value, and that number is used as the flex-item’s “growth factor”.</p>
+    
+                <h4>Flex-shrink</h4>
+                <p><code>flex-shrink</code> is similar to <code>flex-grow</code>, but sets the “shrink factor” of a flex item.</p>
+    
+                <h4>Flex-basis</h4>
+                <p><code>flex-basis</code> sets the initial size of a flex item, so any sort of <code>flex-grow</code> ing or <code>flex-shrink</code> ing starts from that baseline size.</p>
+            </div>
+        </section>
+
+        <section class="main-section" id="Axes">
+            <header><h2>Axes</h2></header>
+            <div>
+                <p>The most confusing thing about flexbox is that it can work either horizontally or vertically, and some rules change a bit depending on which direction you are working with. The default direction for a flex container is horizontal, or <code>row</code>, but you can change the direction to vertical, or <code>column</code>. The direction can be specified in CSS like so:</p>
+
+                <code>
+                    .flex-container{
+                        flex-direction: column;
+                    }
+                </code>
+                <p>No matter which direction you’re using, you need to think of your flex-containers as having 2 axes: the main axis and the cross axis. </p>
+            </div>
+            
+        </section>
+
+        <section class="main-section" id="Alignment">
+            <header><h2>Alignment</h2></header>
+            <div>
+                <p>So far everything we’ve touched with flexbox has used the rule flex: 1 on all flex items, which makes the items grow or shrink equally to fill all of the available space. Very often, however, this is not the desired effect. Flex is also very useful for arranging items that have a specific size.</p>
+            
+                <p><code>justify-content</code> aligns items across the main axis. There are a few values that you can use here. You’ll learn the rest of them in the reading assignments, but for now try changing it to center, which should center the boxes along the main axis.</p>
+
+                <p>To change the placement of items along the cross axis use <code>align-items</code>.</p>
+
+                <h4>Gap</h4>
+                <p>One very useful feature of flex is the <code>gap</code> property. Setting <code>gap</code> on a flex container adds a specified space between flex items, similar to adding a margin to the items themselves. </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header><h2>Reference</h2></header>
+            <div></div>
+        </section>
+    </main>
+    
+</body>
+</html>
