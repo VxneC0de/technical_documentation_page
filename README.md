@@ -4,7 +4,7 @@
 
 > This page is based on a Free Code Camp project about responsive web design, specifically the “Build a Technical Documentation Page” project. I decided to create my technical documentation page using CSS, including an explanation of Flexbox. Additionally, since it’s a Free Code Camp project, I used the required methods, tags, properties, and other elements to complete the page, and even incorporated a media query
 
-![screenshot](./app_screenshot.png)
+![screenshot](./img/app_screenshot.jpeg)
 
 Additional description about the project and its features.
 
