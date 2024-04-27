@@ -82,7 +82,7 @@
                     <li>
                         <h5>Universal selector</h5>
                         <p>The universal selector will select elements of any type, hence the name “universal”, and the syntax for it is a simple asterisk.</p>
-                        <code>* {
+                        <code class="code1">* {
                             color: purple;
                         }</code>
                     </li>
@@ -90,7 +90,7 @@
                     <li>
                         <h5>Type selectors</h5>
                         <p>A type selector will select all elements of the given element type, and the syntax is just the name of the element:</p>
-                        <code>div {
+                        <code class="code1">div {
                             color: white;
                         }</code>
                     </li>
@@ -98,7 +98,7 @@
                     <li>
                         <h5>Class selectors</h5>
                         <p>Class selectors will select all elements with the given class, which is just an attribute you place on an HTML element. Here’s how you add a class to an HTML tag and select it in CSS:</p>
-                        <code>.alert-text {
+                        <code class="code1">.alert-text {
                             color: red;
                         }</code>
                     </li>
@@ -106,7 +106,7 @@
                     <li>
                         <h5>ID selectors</h5>
                         <p>ID selectors are similar to class selectors. They select an element with the given ID, which is another attribute you place on an HTML element. The major difference between classes and IDs is that an element can only have one ID. It cannot be repeated on a single page and should not contain any whitespace:</p>
-                        <code>#title {
+                        <code class="code1">#title {
                             background-color: red;
                         }</code>
                     </li>
@@ -118,24 +118,22 @@
                     <li>
                         <h5>External CSS</h5>
                         <p>External CSS is the most common method you will come across, and it involves creating a separate file for the CSS and linking it inside of an HTML’s opening and closing <head> tags with a self-closing <link> element:</p>
-                        <code>
-                            &lt;head&gt;
+                        <code class="code1">&lt;head&gt;
                             &lt;link rel="stylesheet" href="styles.css"&gt;
                         </code>
                     </li>
 
                     <li>
                         <h5>Internal CSS</h5>
-                        <p>With the internal method, you place all the rules inside of a pair of opening and closing &lt;style&gt; tags, which are then placed inside of the opening and closing &lt;head&gt; tags of your HTML file. Since the styles are being placed directly inside of the &lt;head&gt; tags, we no longer need a &lt;link&gt; element that the external method requires.</p>
-                        <code>
-                            &lt;head&gt;
+                        <p>With the internal method, you place all the rules inside of a pair of opening and closing &lt;style&gt; tags, which are then placed inside of the opening and closing <code class="code2">&lt;head&gt</code>; tags of your HTML file. Since the styles are being placed directly inside of the &lt;head&gt; tags, we no longer need a <code class="code2">&lt;link&gt</code>; element that the external method requires.</p>
+                        <code class="code1">&lt;head&gt;
                                 &lt;style&gt;
                                 div {
                                     color: white;
                                     background-color: black;
                                 }
                         </code>
-                        <code>p {
+                        <code class="code1">p {
                             color: red;
                         }
                             &lt;/style&gt;
@@ -149,8 +147,7 @@
                     <li>
                         <h5>Inline CSS</h5>
                         <p>Inline CSS makes it possible to add styles directly to HTML elements, though this method isn’t as recommended:</p>
-                        <code>
-                            &lt;body&gt;
+                        <code class="code1">&lt;body&gt;
                             &lt;div style="color: white; background-color: black;"&gt;...&lt;/div&gt;
                             &lt;/body&gt;
                         </code>
@@ -189,9 +186,9 @@
                 <p>The only real complication here is that there are many ways to manipulate the size of these boxes, and the space between them, using padding, margin, and border. The assigned articles go into more depth on this concept, but to sum it up briefly:</p>
 
                 <ul>
-                    <li><code>padding</code>: increases the space between the border of a box and the content of the box.</li>
-                    <li><code>margin</code>: increases the space between the borders of a box and the borders of adjacent boxes.</li>
-                    <li><code>border</code>: adds space (even if it’s only a pixel or two) between the margin and the padding.</li>
+                    <li><code class="code2">padding</code>: increases the space between the border of a box and the content of the box.</li>
+                    <li><code class="code2">margin</code>: increases the space between the borders of a box and the borders of adjacent boxes.</li>
+                    <li><code class="code2">border</code>: adds space (even if it’s only a pixel or two) between the margin and the padding.</li>
                 </ul>
             </div>         
         </section>
@@ -220,19 +217,16 @@
                 <p>Flexbox is a way to arrange items into rows or columns. These items will flex (i.e. grow or shrink) based on some rules that you can define.</p>
 
                 <p>A flex container is any element that has display: flex on it. A flex item is any element that lives directly inside of a flex container.</p>
-                <code>
-                .container{
+                <code class="code1">.container{
                     display:flex;
                 }
                 </code>
                 <p>Somewhat confusingly, any element can be both a flex container and a flex item. Said another way, you can also put display: flex on a flex item and then use flexbox to arrange its children.</p>
-                <code>
-                    .container{
+                <code class="code1">.container{
                         display:flex;
                     }
                 </code>
-                <code>
-                    .item{
+                <code class="code1">.item{
                         display:flex;
                     }
                 </code>
@@ -240,41 +234,41 @@
         </section>
 
         <section class="main-section" id="Growing_and_Shrinking">
-            <header><h2>Growung and Shrinking</h2></header>
+            <header><h2>Growing and Shrinking</h2></header>
             <div>
-                <p>The <code>flex</code> declaration is actually a shorthand for 3 properties that you can set on a flex item. These properties affect how flex items size themselves within their container. </p>
-                <p>In this case, <code>flex</code> is actually a shorthand for <code>flex-grow</code>, <code>flex-shrink</code> and <code>flex-basis</code>.</p>
+                <p>The <code class="code2">flex</code> declaration is actually a shorthand for 3 properties that you can set on a flex item. These properties affect how flex items size themselves within their container. </p>
+                <p>In this case, <code class="code2">flex</code> is actually a shorthand for <code class="code2">flex-grow</code>, <code class="code2">flex-shrink</code> and <code class="code2">flex-basis</code>.</p>
     
-                <code>
+                <code class="code1">
                     div{
                         flex: 1;
                     }
                 </code>
     
-                <p>In the above code, <code>flex: 1</code> equates to: <code>flex-grow: 1</code>, <code>flex-shrink: 1</code>, <code>flex-basis: 0</code>.</p>
+                <p>In the above code, <code class="code2">flex: 1</code> equates to: <code class="code2">flex-grow: 1</code>, <code class="code2">flex-shrink: 1</code>, <code class="code2">flex-basis: 0</code>.</p>
     
                 <h4>Flex-grow</h4>
-                <p><code>flex-grow</code> expects a single number as its value, and that number is used as the flex-item’s “growth factor”.</p>
+                <p><code class="code2">flex-grow</code> expects a single number as its value, and that number is used as the flex-item’s “growth factor”.</p>
     
                 <h4>Flex-shrink</h4>
-                <p><code>flex-shrink</code> is similar to <code>flex-grow</code>, but sets the “shrink factor” of a flex item.</p>
+                <p><code class="code2">flex-shrink</code> is similar to <code class="code2">flex-grow</code>, but sets the “shrink factor” of a flex item.</p>
     
                 <h4>Flex-basis</h4>
-                <p><code>flex-basis</code> sets the initial size of a flex item, so any sort of <code>flex-grow</code> ing or <code>flex-shrink</code> ing starts from that baseline size.</p>
+                <p><code class="code2">flex-basis</code> sets the initial size of a flex item, so any sort of <code class="code2">flex-grow</code> ing or <code class="code2">flex-shrink</code> ing starts from that baseline size.</p>
             </div>
         </section>
 
         <section class="main-section" id="Axes">
             <header><h2>Axes</h2></header>
             <div>
-                <p>The most confusing thing about flexbox is that it can work either horizontally or vertically, and some rules change a bit depending on which direction you are working with. The default direction for a flex container is horizontal, or <code>row</code>, but you can change the direction to vertical, or <code>column</code>. The direction can be specified in CSS like so:</p>
+                <p>The most confusing thing about flexbox is that it can work either horizontally or vertically, and some rules change a bit depending on which direction you are working with. The default direction for a flex container is horizontal, or <code class="code2">row</code>, but you can change the direction to vertical, or <code class="code2">column</code>. The direction can be specified in CSS like so:</p>
 
-                <code>
+                <code class="code1">
                     .flex-container{
                         flex-direction: column;
                     }
                 </code>
-                <p>No matter which direction you’re using, you need to think of your flex-containers as having 2 axes: the main axis and the cross axis. </p>
+                <p>No matter which direction you’re using, you need to think of your flex-containers as having 2 axes: the main axis and the cross axis.</p>
             </div>
             
         </section>
@@ -284,23 +278,19 @@
             <div>
                 <p>So far everything we’ve touched with flexbox has used the rule flex: 1 on all flex items, which makes the items grow or shrink equally to fill all of the available space. Very often, however, this is not the desired effect. Flex is also very useful for arranging items that have a specific size.</p>
             
-                <p><code>justify-content</code> aligns items across the main axis. There are a few values that you can use here. You’ll learn the rest of them in the reading assignments, but for now try changing it to center, which should center the boxes along the main axis.</p>
+                <p><code class="code2">justify-content</code> aligns items across the main axis. There are a few values that you can use here. You’ll learn the rest of them in the reading assignments, but for now try changing it to center, which should center the boxes along the main axis.</p>
 
-                <p>To change the placement of items along the cross axis use <code>align-items</code>.</p>
+                <p>To change the placement of items along the cross axis use <code class="code2">align-items</code>.</p>
 
                 <h4>Gap</h4>
-                <p>One very useful feature of flex is the <code>gap</code> property. Setting <code>gap</code> on a flex container adds a specified space between flex items, similar to adding a margin to the items themselves. </p>
+                <p>One very useful feature of flex is the <code class="code2">gap</code> property. Setting <code class="code2">gap</code> on a flex container adds a specified space between flex items, similar to adding a margin to the items themselves. </p>
             </div>
         </section>
 
         <section class="main-section" id="Reference">
             <header><h2>Reference</h2></header>
             <div>
-                <ul>
-                    <li>
-                        All the documentation in this page is taken from <a href="https://www.theodinproject.com/paths/foundations/courses/foundations" target="_blank">Odin Project</a>
-                    </li>
-                </ul>
+                <p class="referenceP">All the documentation in this page is taken from <a href="https://www.theodinproject.com/paths/foundations/courses/foundations" target="_blank">Odin Project</a></p>
             </div>
         </section>
     </main>
