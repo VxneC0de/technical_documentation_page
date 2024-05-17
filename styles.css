@@ -12,9 +12,10 @@ body{
 
 #navbar{
     position: fixed;
+    min-width: 290px;
     top: 0px;
     left: 0px;
-    width: 315px;
+    width: 300px;
     height: 100%;
     border-right: 4px solid rgba(255, 255, 255, 0.616);
 }
@@ -26,12 +27,15 @@ body{
     text-align: center;
     font-size: 27px;
     font-weight: 600;
+    font-weight: thin;
 }
 
 #navbar ul{
     margin-top: 9px;
     height: 88%;
     padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #navbar ul li{
@@ -40,11 +44,12 @@ body{
     list-style: none;
     width: 100%;
     font-size: 16px;
+    position: relative;
 }
 
 #navbar ul li a{
     display: block;
-    padding: 10px 25px;
+    padding: 10px 30px;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
@@ -56,6 +61,11 @@ body{
     margin-left: 310px;
     padding: 20px;
     margin-bottom: 110px;
+}
+
+.main-section{
+    display: block;
+    unicode-bidi: isolate;
 }
 
 #main-doc header{
@@ -116,6 +126,7 @@ body{
     cursor: pointer;
 }
 
+
 @media screen and (max-width: 780px) {
     #navbar{
         width: 240px;
@@ -144,5 +155,30 @@ body{
     
     #main-doc div ul li h5{
         font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 815px) {
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+
+    #navbar ul {
+        border: 1px solid;
+        height: 207px;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
     }
 }
