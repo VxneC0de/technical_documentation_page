@@ -126,38 +126,6 @@ body{
     cursor: pointer;
 }
 
-
-@media screen and (max-width: 780px) {
-    #navbar{
-        width: 240px;
-    }
-    
-    #navbar header{
-        font-size: 22px;
-    }
-    
-    #navbar ul li{
-        font-size: 14px;
-    }
-    
-    #main-doc{
-        margin-left: 240px;
-    }
-
-    #main-doc header h2{
-        font-size: 20px;
-    }
-
-    #main-doc div h4{
-        font-size: 15px;
-        text-decoration: underline
-    }
-    
-    #main-doc div ul li h5{
-        font-size: 13px;
-    }
-}
-
 @media only screen and (max-width: 815px) {
     #navbar {
         position: absolute;
@@ -165,10 +133,10 @@ body{
         padding: 0;
         margin: 0;
         width: 100%;
-        max-height: 275px;
+        max-height: 269px;
         border: none;
         z-index: 1;
-        border-bottom: 2px solid;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.616);
     }
 
     #navbar ul {
